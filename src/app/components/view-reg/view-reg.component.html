@@ -1,0 +1,17 @@
+<ng-container *ngIf="bikeDetails">
+  <div
+    class="card-wrapper-dimension d-flex justify-content-center align-items-center"
+  >
+    <div class="card card-dimension text-dark bg-info mb-3">
+      <div class="card-header">Buyer Name:{{ bikeDetails.name }}</div>
+      <div class="card-body d-flex flex-column">
+        <div class="email">{{ bikeDetails.email }}</div>
+        <div class="phone">{{ bikeDetails.phone }}</div>
+        <div class="model">{{ bikeDetails.model }}</div>
+        <div class="serial-number">{{ bikeDetails.serialNumber }}</div>
+        <div class="purchase-price">{{ bikeDetails.purchasePrice }}</div>
+        <div class="purchase-date">{{ bikeDetails.purchaseDate }}</div>
+      </div>
+    </div>
+  </div>
+</ng-container>

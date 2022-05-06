@@ -1,0 +1,6 @@
+<ng-container *ngIf="bikeRegForm | async as registrationForm"
+  ><app-landing
+    [bikeRegForm]="registrationForm"
+    (regFormEvent)="regFormEvent($event)"
+  ></app-landing
+></ng-container>

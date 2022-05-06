@@ -1,0 +1,13 @@
+.reg-form {
+  height: 60%;
+  width: 45%;
+}
+
+.margin-around {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.form-label.required:after {
+  content: "*";
+  color: red;
+}

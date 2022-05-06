@@ -1,0 +1,110 @@
+<div
+  class="container-fluid d-flex justify-content-center bg-light margin-around"
+>
+  <form
+    *ngIf="bikeRegForm"
+    [formGroup]="bikeRegForm"
+    (ngSubmit)="registerBikes()"
+    class="reg-form rounded p-5 shadow-lg"
+  >
+    <div class="mb-3">
+      <label for="name" class="form-label required">Buyer Name</label>
+      <input
+        formControlName="name"
+        type="text"
+        class="form-control"
+        id="user__name"
+        autofocus
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label required">Email address</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="user__email"
+        aria-describedby="emailHelp"
+      />
+      <div id="email__Help" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label required">Password</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        id="pass__word"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label required">Phone</label>
+      <input
+        formControlName="phone"
+        type="text"
+        class="form-control"
+        id="phone__number"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="model" class="form-label required">Bike Model</label>
+      <select formControlName="model" id="bike__model" class="form-control">
+        <option value="">Please select a model</option>
+        <option class="option" *ngFor="let bike of bikes.models">
+          {{ bike.type }}
+        </option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="serialnumber" class="form-label required"
+        >Serial Number</label
+      >
+      <input
+        formControlName="serialNumber"
+        type="text"
+        class="form-control"
+        id="serail__number"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="purchaseprice" class="form-label required"
+        >Purchase Price</label
+      >
+      <input
+        formControlName="purchasePrice"
+        type="number"
+        class="form-control"
+        id="purchase__price"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="purchasedate" class="form-label required"
+        >Purchase Date</label
+      >
+      <input
+        formControlName="purchaseDate"
+        type="date"
+        class="form-control"
+        id="purchase__date"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="contact" class="form-label">contact</label>
+      <input
+        formControlName="contact"
+        type="text"
+        class="form-control"
+        id="Contact"
+      />
+    </div>
+    <button
+      [disabled]="!bikeRegForm.valid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </form>
+</div>
